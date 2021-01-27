@@ -1,0 +1,19 @@
+body {
+    padding: 10px;
+}
+
+div {
+    margin: 10px;
+}
+
+label, select, button{
+    margin: 10px;
+}
+
+select {
+    padding: 2px;
+}
+
+#results {
+    padding: 10px;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>findCounters</title>
+    <link rel="stylesheet" href="./css/findCounters.css">
+</head>
+<body>
+    <header>
+        <h1>Find Pokemon Go Type Counters</h1>
+    </header>
+    <article>
+        <div>
+            <label for="type" id="typeLabel">Which type do you need counters for?</label><br>
+            <select name="type" id="typeForCounter1">
+                <option value="None" selected>Type 1</option>
+            </select>
+            <select name="type" id="typeForCounter2">
+                <option value="None" selected>Type 2</option>
+            </select><br>
+            <button id="goButton" onclick="findCounter()">Find Counters</button>
+        </div>
+        <div id="results" >
+            Test
+        </div>
+    </article>
+    <script src="./js/findCounters.js"></script>
+</body>
+</html>
