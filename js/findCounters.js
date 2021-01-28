@@ -7,7 +7,7 @@ function findCounter() {
     let selected2 = document.getElementById('typeForCounter2').value.toLowerCase();
     var counters = new Set();
     var counters2x = new Set();
-    var resultString = "Counters for ";
+    var resultString = "<div>Counters for ";
 
     if ( selected1 != "none" ){
         for ( i in weakTo[selected1] ){
@@ -24,13 +24,18 @@ function findCounter() {
                 counters.add(capitalize(weakTo[selected2][i]))
             };
         };
-        resultString = resultString + `and ${capitalize(selected2)} `;
+        if ( selected1 === "none" ){
+            resultString = resultString + `${capitalize(selected2)} `
+        }
+        else {
+            resultString = resultString + `and ${capitalize(selected2)} `;
+        }
     };
-    resultString = resultString + ":<br>";
+    resultString = resultString + ":</div><div>";
     resultString = resultString + `${Array.from(counters).join(", ")}`;
-    resultString = resultString + "<br>";
+    resultString = resultString + "</div>";
     if ( counters2x.size != 0 ){
-        resultString = resultString + `Double weak to : ${Array.from(counters2x).join(", ")}`;
+        resultString = resultString + `<div id="double"><h2>Double weak to : ${Array.from(counters2x).join(", ")}</h2></div>`;
     }
     var divResults = document.getElementById('results');
     divResults.innerHTML = resultString

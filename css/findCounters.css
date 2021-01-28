@@ -17,3 +17,8 @@ select {
 #results {
     padding: 10px;
 }
+
+#double {
+    font-weight: bold;
+    color: #4d1979;
+}
