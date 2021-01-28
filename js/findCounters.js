@@ -3,47 +3,36 @@ function capitalize(str){
 };
 
 function findCounter() {
-    selected1 = document.getElementById('typeForCounter1').value.toLowerCase();
-    selected2 = document.getElementById('typeForCounter2').value.toLowerCase();
+    let selected1 = document.getElementById('typeForCounter1').value.toLowerCase();
+    let selected2 = document.getElementById('typeForCounter2').value.toLowerCase();
     var counters = new Set();
     var counters2x = new Set();
     var resultString = "Counters for ";
 
     if ( selected1 != "none" ){
         for ( i in weakTo[selected1] ){
-            if ( counters.has(weakTo[selected1][i]) ){
-                counters2x.add(weakTo[selected1][i]);
-            }
-            else {
-                counters.add(weakTo[selected1][i]);
-            };
+            counters.add(capitalize(weakTo[selected1][i]));
         };
         resultString = resultString + `${capitalize(selected1)} `
     };
-    if ( selected2 != "none" ){
+    if ( selected2 != "none" && selected1 != selected2){
         for ( i in weakTo[selected2] ){
-            if ( counters.has(weakTo[selected2][i]) ){
-                counters2x.add(weakTo[selected2][i])
+            if ( counters.has(capitalize(weakTo[selected2][i])) ){
+                counters2x.add(capitalize(weakTo[selected2][i]))
             }
             else {
-                counters.add(weakTo[selected2][i])
+                counters.add(capitalize(weakTo[selected2][i]))
             };
         };
-        resultString = resultString + `${capitalize(selected2)} `;
+        resultString = resultString + `and ${capitalize(selected2)} `;
     };
-
+    console.log(`counters2x = ${Array.from(counters2x).join()}`)
     resultString = resultString + ":<br>";
-    for ( let i of counters ){
-        resultString = resultString + `${capitalize(i)} `
-    };
+    resultString = resultString + `${Array.from(counters).join(", ")}`;
     resultString = resultString + "<br>";
     if ( counters2x.size != 0 ){
-        resultString = resultString + "Double weak to : ";
-        for ( let i of counters2x ){
-            resultString = resultString + `${capitalize(i)} `
-        }
+        resultString = resultString + `Double weak to : ${Array.from(counters2x).join(", ")}`;
     }
-    
     var divResults = document.getElementById('results');
     divResults.innerHTML = resultString
     divResults.style.display = "block"
