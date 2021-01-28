@@ -26,7 +26,6 @@ function findCounter() {
         };
         resultString = resultString + `and ${capitalize(selected2)} `;
     };
-    console.log(`counters2x = ${Array.from(counters2x).join()}`)
     resultString = resultString + ":<br>";
     resultString = resultString + `${Array.from(counters).join(", ")}`;
     resultString = resultString + "<br>";
