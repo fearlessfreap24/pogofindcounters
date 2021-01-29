@@ -14,21 +14,31 @@
     </header>
     <article>
         <div id="main">
-            <div>
-                <label for="type" id="typeLabel">Which type do you need counters for?</label><br>
-                <select name="type" id="typeForCounter1">
-                    <option value="None" selected>Type 1</option>
-                </select>
-                <select name="type" id="typeForCounter2">
-                    <option value="None" selected>Type 2</option>
-                </select><br>
-                <button id="goButton" onclick="findCounter()">Find Counters</button>
+            <div id="typeselect">
+                <div id="label">
+                    <label for="type" id="typeLabel">Which type do you need counters for?</label>
+                </div>
+                <div id="selectbox">
+                    <div id="select1">
+                        <select name="type" id="typeForCounter1">
+                            <option value="None" selected>Type 1</option>
+                        </select>
+                    </div>
+                    <div id="select2">
+                        <select name="type" id="typeForCounter2">
+                            <option value="None" selected>Type 2</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="button">
+                    <button id="goButton" onclick="findCounter()">Find Counters</button>
+                </div>
             </div>
             <div id="results" >
                 Test
             </div>
             <div id="pokeball">
-                <img src="./img/pokeball.png" height="150" width="150" alt="pokeball transparent background" />
+                <img src="./img/pokeball.png" height="200" width="200" alt="pokeball transparent background" />
             </div>
         </div>
     </article>

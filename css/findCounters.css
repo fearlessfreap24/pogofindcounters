@@ -3,12 +3,30 @@ body {
     background-color: rgb(246, 246, 246);    
 }
 
-div {
+/* div {
     margin: 10px;
-}
+} */
 
 #head {
     width: 300px;
+}
+
+#typeselect, #label, #button #selectbox {
+    width: 300px;
+    text-align: center;    
+}
+
+#selectbox {
+    display: flex;
+    justify-content: center;
+}
+
+#select1 {
+    padding-right: 10px;
+}
+
+#select2 {
+    padding-left: 10px;
 }
 
 h1 {
