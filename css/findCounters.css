@@ -1,9 +1,30 @@
 body {
     padding: 10px;
+    background-color: rgb(246, 246, 246);    
 }
 
 div {
     margin: 10px;
+}
+
+#head {
+    width: 300px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#main {
+    height: 500px;
+    width: 300px;
+    position: relative;
+}
+
+#pokeball {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
 }
 
 label, select, button{
